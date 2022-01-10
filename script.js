@@ -9,6 +9,11 @@ function random_rgb() {
     return 'rgb(' + a(b()*c) + ',' + a(b()*c) + ',' + a(b()*c) + ')';
 }
 
-var color = random_rgb()
+var randomColor = random_rgb()
 
-document.body.style.backgroundColor = color;
+document.body.style.backgroundColor = randomColor;
+
+var d = document.body.children;
+for (const element of d) {
+    console.log(element);
+}
