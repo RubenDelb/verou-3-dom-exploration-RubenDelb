@@ -18,6 +18,8 @@ function BlackOrWhite(rgb) {
     }
 }
 
+const shuffledPeople = names.sort((a, b) => 0.5 - Math.random());
+
 for (let oneName of names) {
     console.log(oneName);
     const newSection = document.createElement("section");
@@ -28,19 +30,3 @@ for (let oneName of names) {
     newSection.appendChild(newParagraph);
     article.appendChild(newSection);
 }
-
-
-
-/*names.forEach(function addElement() {
-    const newElement = document.createElement("section");
-    const newParagraph = document.createElement("p");
-    newElement.appendChild(newParagraph);
-    const currentSection = document.querySelector("article");
-    newElement.appendChild(currentSection);
-})
-names.forEach function addElement() {
-    const newSection = document.createElement("section");
-
-    const newParagraph = document.createElement("p");
-}
-*/
