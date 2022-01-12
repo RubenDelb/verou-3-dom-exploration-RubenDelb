@@ -1,5 +1,7 @@
 const names = ["Pieter", "Dery", "Ahmad", "Jian", "Michael", "Dante", "Muhammet", "Nicolas", "Jordy", "Beryl", "Cynthia", "Magali", "Jawid", "Koen", "Kevin", "Benjamin", "Michelle", "Colin", "Feruz", "Ellen", "Sara"];
 
+const shuffledPeople = names.sort((a, b) => 0.5 - Math.random());
+
 const article = document.querySelector("article");
 
 function random_rgb() {
@@ -17,8 +19,6 @@ function BlackOrWhite(rgb) {
         return 'white';
     }
 }
-
-const shuffledPeople = names.sort((a, b) => 0.5 - Math.random());
 
 for (let oneName of names) {
     console.log(oneName);
