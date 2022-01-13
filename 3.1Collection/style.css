@@ -81,5 +81,24 @@ main .card:hover {
   cursor: pointer;
   -webkit-transform: scale(1.03);
           transform: scale(1.03);
+  -webkit-transition-duration: 0.6s;
+          transition-duration: 0.6s;
+  -webkit-box-shadow: 10px 10px 15px 0px #463c2eb7;
+          box-shadow: 10px 10px 15px 0px #463c2eb7;
+  border-radius: 15px;
+}
+
+@media only screen and (max-width: 640px) {
+  main .recipeLink .card {
+    -webkit-transform: scale(1.05);
+            transform: scale(1.05);
+  }
+  main .recipeLink .card .infoPart {
+    height: 100px;
+    background-color: #eac997;
+  }
+  main .recipeLink .card .infoPart .description {
+    display: none;
+  }
 }
 /*# sourceMappingURL=style.css.map */
