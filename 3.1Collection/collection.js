@@ -95,9 +95,14 @@ for (let recipe of recipes) {
     infoPart.className = "infoPart"; //assign classname
     newCard.appendChild(infoPart);//add the bottompart to the card
 
-    const titleInfo = document.createElement("div");//Create the top div for the infopart
-    titleInfo.className = "titleInfo"; //assign classname
-    infoPart.appendChild(titleInfo); //add to titleInfo the bottom part-div of the card (infoPart)
+    const title = document.createElement("h2");//Create the top h2 for the name of the recipe
+    title.className = "title"; //assign classname
+    title.innerHTML = recipe.name; //implement the name form the array to the paragraph
+    infoPart.appendChild(title); //add to title the bottom part-h2 of the card (infoPart)
+
+    const preparation = document.createElement("div");//Create an div for the preparation-section
+    preparation.className = "preparation"; //assign classname
+    infoPart.appendChild(preparation); //add the div to the infoPart-div
 
     const origin = document.createElement("p");//Create a paragraph for the origin
     origin.className = "origin"; //assign classname
@@ -109,20 +114,15 @@ for (let recipe of recipes) {
     description.innerHTML = recipe.description; //implement the description-name from the array to the paragraph
     infoPart.appendChild(description); //add the paragraph to the bottom-part-div (infoPart)
 
-    const title = document.createElement("h2");//Create an h2 for the title
-    title.className = "title"; //assign classname
-    title.innerHTML = recipe.name; //implement the title-name from the array to the h2-element
-    titleInfo.appendChild(title); //add the h2 to the titleInfo-div
+    const preparationTime = document.createElement("p");//Create an p for the preparationTime
+    preparationTime.className = "preparationTime"; //assign classname
+    preparationTime.innerHTML = recipe.preparationTime; //implement the preparationTime-name from the array to the p-element
+    preparation.appendChild(preparationTime); //add the p to the preparation-div
 
     const difficulty = document.createElement("p");//Create an p for the difficulty
     difficulty.className = "difficulty"; //assign classname
     difficulty.innerHTML = recipe.difficulty; //implement the difficulty-name from the array to the p-element
-    titleInfo.appendChild(difficulty); //add the p to the titleInfo-div
-
-    const preparationTime = document.createElement("p");//Create an p for the preparationTime
-    preparationTime.className = "preparationTime"; //assign classname
-    preparationTime.innerHTML = recipe.preparationTime; //implement the preparationTime-name from the array to the p-element
-    titleInfo.appendChild(preparationTime); //add the p to the titleInfo-div
+    preparation.appendChild(difficulty); //add the p to the preparation-div
 
     
     // const newTitle = document.createElement("h2"); //Create a Title
