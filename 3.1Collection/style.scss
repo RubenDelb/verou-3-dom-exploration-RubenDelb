@@ -21,49 +21,51 @@ main {
     display: grid;
     grid-template-columns: repeat(auto-fill, 320px);
     justify-content: center;
-    color: rgb(23, 22, 21);
 
-    .card {
-        display: grid;
-        grid-template-columns: 1fr;
-        margin: 20px;
+    .recipeLink {
+        text-decoration: none;
+        color: rgb(23, 22, 21);
 
+        .card {
+            display: grid;
+            grid-template-columns: 1fr;
+            margin: 20px;
 
-
-        .topPart {
-            width: 280px;
-            height: auto;
-            border-radius: 15px 15px 0 0;
-        }
-
-        .infoPart {
-            background-color: rgba(201, 156, 93, 0.95);
-            text-align: center;
-            display: 280px;
-            height: 250px;
-            border-radius: 0 0 15px 15px;
-            padding: 10px;
-
-            .title {
-                padding-bottom: 10px;
+            .topPart {
+                width: 280px;
+                height: auto;
+                border-radius: 15px 15px 0 0;
             }
 
-            .origin {
-                font-style: italic;
-                font-size: 0.8em;
+            .infoPart {
+                background-color: rgba(234, 201, 151, 0.9);
+                text-align: center;
+                display: 280px;
+                height: 250px;
+                border-radius: 0 0 15px 15px;
                 padding: 10px;
-            }
 
-            .description {}
+                .title {
+                    padding-bottom: 10px;
+                }
 
-            .preparation {
-                display: flex;
-                flex-direction: row;
-                justify-content: space-around;
+                .origin {
+                    font-style: italic;
+                    font-size: 0.8em;
+                    padding: 10px;
+                }
 
-                .preparationTime {}
+                .description {}
 
-                .difficulty {}
+                .preparation {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-around;
+
+                    .preparationTime {}
+
+                    .difficulty {}
+                }
             }
         }
     }

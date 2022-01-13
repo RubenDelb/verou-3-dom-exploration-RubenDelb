@@ -25,10 +25,14 @@ main {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+main .recipeLink {
+  text-decoration: none;
   color: #171615;
 }
 
-main .card {
+main .recipeLink .card {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr;
@@ -36,14 +40,14 @@ main .card {
   margin: 20px;
 }
 
-main .card .topPart {
+main .recipeLink .card .topPart {
   width: 280px;
   height: auto;
   border-radius: 15px 15px 0 0;
 }
 
-main .card .infoPart {
-  background-color: rgba(201, 156, 93, 0.95);
+main .recipeLink .card .infoPart {
+  background-color: rgba(234, 201, 151, 0.9);
   text-align: center;
   display: 280px;
   height: 250px;
@@ -51,17 +55,17 @@ main .card .infoPart {
   padding: 10px;
 }
 
-main .card .infoPart .title {
+main .recipeLink .card .infoPart .title {
   padding-bottom: 10px;
 }
 
-main .card .infoPart .origin {
+main .recipeLink .card .infoPart .origin {
   font-style: italic;
   font-size: 0.8em;
   padding: 10px;
 }
 
-main .card .infoPart .preparation {
+main .recipeLink .card .infoPart .preparation {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
