@@ -4,6 +4,36 @@ import {
 
 const main = document.querySelector("main");
 
+const header = document.querySelector("header");
+
+// TODO: add searchbar to filter item cards
+let searchBar = document.createElement("input");
+searchBar.id = "searchBar";
+searchBar.type = "text";
+searchBar.name = "search";
+searchBar.placeholder = "Search items";
+searchBar.onkeyup = function () {
+    let input = document.getElementById("searchBar").value.toLowerCase();
+    let cardTitles = document.querySelectorAll("a.recipeLink");
+
+    console.log(cardTitles[0].innerHTML);
+    cardTitles.forEach((el) => {
+        let elementItemTitle = el.children[0].children[1].children[0].innerHTML;
+        let elementItemType = el.children[0].children[1].children[1].children[1].innerHTML;
+
+        if (elementItemTitle.toLowerCase().includes(input) || elementItemType.toLowerCase().includes(input)) {
+            el.style.display = "block";
+        } else {
+            el.style.display = "none";
+        }
+    });
+};
+
+header.appendChild(searchBar);
+
+
+
+const timer = './Pictures/timer-svgrepo-com (1).svg'
 for (let recipe of recipes) {
     const links = document.createElement("a"); //Create an anchor-tag to add a link to the card when clicked.
     links.className = "recipeLink"; //assign a classname
@@ -53,6 +83,20 @@ for (let recipe of recipes) {
     preparation.appendChild(difficulty); //add the p to the preparation-div
 
     main.append(links);
+}
+
+function search_animal() {
+    let input = document.getElementById('searchbar').value
+    input = input.toLowerCase();
+    let x = document.getElementsByClassName('title');
+
+    for (i = 0; i < x.length; i++) {
+        if (!x[i].innerHTML.toLowerCase().includes(input)) {
+            x[i].style.display = "none";
+        } else {
+            x[i].style.display = "list-item";
+        }
+    }
 }
 
 // const names = recipes.map(o => o.name).flat();
