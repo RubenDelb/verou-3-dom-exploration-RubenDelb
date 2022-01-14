@@ -106,6 +106,7 @@ const recipes = [{
         preparationTime: '45min',
         difficulty: 'Medium',
     },
+    
 ]
 
 export {

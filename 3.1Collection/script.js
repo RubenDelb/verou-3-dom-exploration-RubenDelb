@@ -1,4 +1,6 @@
-import { recipes } from "./collection.js";
+import {
+    recipes
+} from "./collection.js";
 
 const main = document.querySelector("main");
 
@@ -52,7 +54,6 @@ for (let recipe of recipes) {
 
     main.append(links);
 }
-
 
 // const names = recipes.map(o => o.name).flat();
 
