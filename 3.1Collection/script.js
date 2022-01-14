@@ -11,17 +11,18 @@ let searchBar = document.createElement("input");
 searchBar.id = "searchBar";
 searchBar.type = "text";
 searchBar.name = "search";
-searchBar.placeholder = "Search items";
+searchBar.placeholder = "Search recipe/difficulty/origin";
 searchBar.onkeyup = function () {
     let input = document.getElementById("searchBar").value.toLowerCase();
     let cardTitles = document.querySelectorAll("a.recipeLink");
 
-    console.log(cardTitles[0].innerHTML);
+    //console.log(cardTitles[0].innerHTML);
     cardTitles.forEach((el) => {
-        let elementItemTitle = el.children[0].children[1].children[0].innerHTML;
-        let elementItemType = el.children[0].children[1].children[1].children[1].innerHTML;
+        let recipeTitle = el.children[0].children[1].children[0].innerHTML;
+        let recipeDifficulty = el.children[0].children[1].children[1].children[1].innerHTML;
+        let recipeOrigin = el.children[0].children[1].children[2].innerHTML;
 
-        if (elementItemTitle.toLowerCase().includes(input) || elementItemType.toLowerCase().includes(input)) {
+        if (recipeTitle.toLowerCase().includes(input) || recipeDifficulty.toLowerCase().includes(input) || recipeOrigin.toLowerCase().includes(input)) {
             el.style.display = "block";
         } else {
             el.style.display = "none";
@@ -31,9 +32,8 @@ searchBar.onkeyup = function () {
 
 header.appendChild(searchBar);
 
+const timer = "./Pictures/timer-svgrepo-com (1).svg"
 
-
-const timer = './Pictures/timer-svgrepo-com (1).svg'
 for (let recipe of recipes) {
     const links = document.createElement("a"); //Create an anchor-tag to add a link to the card when clicked.
     links.className = "recipeLink"; //assign a classname
@@ -72,10 +72,19 @@ for (let recipe of recipes) {
     description.innerHTML = recipe.description; //implement the description-name from the array to the paragraph
     infoPart.appendChild(description); //add the paragraph to the bottom-part-div (infoPart)
 
+    const preparationDiv = document.createElement("div");
+    preparationDiv.className = "preparationDiv"
+    preparation.appendChild(preparationDiv);
+
+    const timerImg = document.createElement("img");
+    timerImg.className = "timerImg";
+    timerImg.src = timer;
+    preparationDiv.appendChild(timerImg);
+
     const preparationTime = document.createElement("p"); //Create an p for the preparationTime
     preparationTime.className = "preparationTime"; //assign classname
     preparationTime.innerHTML = recipe.preparationTime; //implement the preparationTime-name from the array to the p-element
-    preparation.appendChild(preparationTime); //add the p to the preparation-div
+    preparationDiv.appendChild(preparationTime); //add the p to the preparation-div
 
     const difficulty = document.createElement("p"); //Create an p for the difficulty
     difficulty.className = "difficulty"; //assign classname
@@ -83,20 +92,6 @@ for (let recipe of recipes) {
     preparation.appendChild(difficulty); //add the p to the preparation-div
 
     main.append(links);
-}
-
-function search_animal() {
-    let input = document.getElementById('searchbar').value
-    input = input.toLowerCase();
-    let x = document.getElementsByClassName('title');
-
-    for (i = 0; i < x.length; i++) {
-        if (!x[i].innerHTML.toLowerCase().includes(input)) {
-            x[i].style.display = "none";
-        } else {
-            x[i].style.display = "list-item";
-        }
-    }
 }
 
 // const names = recipes.map(o => o.name).flat();

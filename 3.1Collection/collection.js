@@ -44,6 +44,15 @@ const recipes = [{
         difficulty: 'Easy',
     },
     {
+        delink: 'https://www.veguru.be/recipe/vegan-stoverij/',
+        picture: './Pictures/vegan-stew.jpg',
+        name: 'Vegan Stew',
+        description: 'A delicious stew with fries always tastes great! This Flemish classic is easy to make without meat.',
+        origin: 'Belgium',
+        preparationTime: '2h15min',
+        difficulty: 'Hard',
+    },
+    {
         delink: 'https://cookieandkate.com/thai-panang-curry-recipe/',
         picture: './Pictures/PanaengCurry.jpg',
         name: 'Penaeng curry',
@@ -62,15 +71,6 @@ const recipes = [{
         difficulty: 'Medium',
     },
     {
-        delink: 'https://www.veguru.be/recipe/vegan-stoverij/',
-        picture: './Pictures/vegan-stew.jpg',
-        name: 'Vegan Stew',
-        description: 'A delicious stew with fries always tastes great! This Flemish classic is easy to make without meat.',
-        origin: 'Belgium',
-        preparationTime: '2h15min',
-        difficulty: 'Hard',
-    },
-    {
         delink: 'https://chickslovefood.com/recept/pad-thai-met-tofu/',
         picture: './Pictures/PadThai.jpg',
         name: 'Pad Thai',
@@ -85,7 +85,7 @@ const recipes = [{
         name: 'Jaipuri Aloo',
         description: 'A heavenly preparation using potatoes and onions, cooked in a scrumptious curry, packed with savoury flavors',
         origin: 'India',
-        preparationTime: '#',
+        preparationTime: '45min',
         difficulty: 'Medium',
     },
     {

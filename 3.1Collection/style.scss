@@ -11,16 +11,23 @@ body {
 }
 
 .pageTitle {
-    margin: 40px 20px 30px 20px;
+    padding: 30px 10px 30px 10px;
     text-align: center;
     color: #fffcfa;
     font-size: 3em;
+    background-color: rgba(77, 30, 9, 0.5);
 }
 
 #searchBar {
-    display: flex;
-    justify-content: center;
-
+    border: inset;
+    border-color: rgba(77, 30, 9, 0.7);
+    border-radius: 10px;
+    background-color: rgba(234, 201, 151, 0.8);
+    font-size: 1.1rem;
+    text-align: center;
+    width: 39%;
+    margin: 40px 30% 10px 30%;
+    padding: 5px 0;
 }
 
 main {
@@ -68,7 +75,20 @@ main {
                     flex-direction: row;
                     justify-content: space-around;
 
-                    .preparationTime {}
+                    .preparationDiv {
+                        display: flex;
+                        flex-direction: row;
+
+                        .timerImg {
+                            width: 20px;
+                            padding-right: 5px;
+                        }
+
+                        .preparationTime {
+                            font-weight: bold;
+                            font-style: oblique;
+                        }
+                    }
 
                     .difficulty {}
                 }
@@ -83,9 +103,28 @@ main {
         box-shadow: 10px 10px 15px 0px #463c2eb7;
         border-radius: 15px;
     }
+
+    .card:not(:hover) {
+        transform: scale(1);
+        transition-duration: 0.6s;
+    }
+}
+
+footer {
+    display: grid;
+    grid-row: span 2;
+    padding: 20px;
+    text-align: center;
+    background-color: rgb(77, 30, 9);
+    color: #fffcfa;
 }
 
 @media only screen and (max-width: 640px) {
+    #searchBar {
+        width: 49%;
+        margin: 40px 25% 10px 25%;
+    }
+
     main .recipeLink {
         .card {
             transform: scale(1.05);
@@ -99,5 +138,12 @@ main {
                 }
             }
         }
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    #searchBar {
+        width: 99%;
+        margin: 40px 0 10px 0;
     }
 }
