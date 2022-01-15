@@ -32,7 +32,9 @@ searchBar.onkeyup = function () {
 
 header.appendChild(searchBar);
 
-const timer = "./Pictures/timer-svgrepo-com (1).svg"
+const timer = "./Pictures/timer-svgrepo-com (1).svg";
+
+const chefshat = "./Pictures/chefshat.svg";
 
 for (let recipe of recipes) {
     const links = document.createElement("a"); //Create an anchor-tag to add a link to the card when clicked.
@@ -81,6 +83,15 @@ for (let recipe of recipes) {
     timerImg.src = timer;
     preparationDiv.appendChild(timerImg);
 
+    const difficultyDiv = document.createElement("div");
+    difficultyDiv.className = "difficultyDiv";
+    preparation.appendChild(difficultyDiv);
+
+    const chefshatImg = document.createElement("img");
+    chefshatImg.className = "chefshatImg";
+    chefshatImg.src = chefshat;
+    difficultyDiv.appendChild(chefshatImg);
+
     const preparationTime = document.createElement("p"); //Create an p for the preparationTime
     preparationTime.className = "preparationTime"; //assign classname
     preparationTime.innerHTML = recipe.preparationTime; //implement the preparationTime-name from the array to the p-element
@@ -89,7 +100,7 @@ for (let recipe of recipes) {
     const difficulty = document.createElement("p"); //Create an p for the difficulty
     difficulty.className = "difficulty"; //assign classname
     difficulty.innerHTML = recipe.difficulty; //implement the difficulty-name from the array to the p-element
-    preparation.appendChild(difficulty); //add the p to the preparation-div
+    difficultyDiv.appendChild(difficulty); //add the p to the preparation-div
 
     main.append(links);
 }

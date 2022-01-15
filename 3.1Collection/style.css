@@ -110,6 +110,23 @@ main .recipeLink .card .infoPart .preparation .preparationDiv .preparationTime {
   font-style: oblique;
 }
 
+main .recipeLink .card .infoPart .preparation .difficultyDiv {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+main .recipeLink .card .infoPart .preparation .difficultyDiv .chefshatImg {
+  width: 20px;
+  padding-right: 5px;
+  -webkit-filter: invert(0%) sepia(100%) saturate(0%) hue-rotate(90deg) brightness(50%) contrast(100%);
+          filter: invert(0%) sepia(100%) saturate(0%) hue-rotate(90deg) brightness(50%) contrast(100%);
+}
+
 main .card:hover {
   cursor: pointer;
   -webkit-transform: scale(1.03);

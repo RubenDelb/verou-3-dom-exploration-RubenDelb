@@ -90,7 +90,16 @@ main {
                         }
                     }
 
-                    .difficulty {}
+                    .difficultyDiv {
+                        display: flex;
+                        flex-direction: row;
+
+                        .chefshatImg {
+                            width: 20px;
+                            padding-right: 5px;
+                            filter: invert(0%) sepia(100%) saturate(0%) hue-rotate(90deg) brightness(50%) contrast(100%);
+                        }
+                    }
                 }
             }
         }

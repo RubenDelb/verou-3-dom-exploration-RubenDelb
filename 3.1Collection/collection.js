@@ -106,6 +106,15 @@ const recipes = [{
         preparationTime: '45min',
         difficulty: 'Medium',
     },
+    {
+        delink: 'https://www.hellofresh.be/recipes/groentepaella-met-krokante-halloumi-5f0c61f1c3795f61c21f5d47',
+        picture: './Pictures/paella.jpg',
+        name: 'Vegetable Paella',
+        description: 'This vegetable paella with crispy halloumi is ideal for the lovers of Spanish food.',
+        origin: 'Spain',
+        preparationTime: '30min',
+        difficulty: 'Medium',
+    },
 
 ]
 
