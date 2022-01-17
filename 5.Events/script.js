@@ -6,12 +6,20 @@ function getElapsedTime() {
 
 const list = document.querySelector("ul");
 
+function alertMessage(e) {
+    alert(e.target.classList[1]);
+}
+
 function clickOnSquare(e) {
     console.log(e.target.classList[1])
     console.log(getElapsedTime())
     const wrapper = document.querySelector(".displayedsquare-wrapper");
     const newDiv = document.createElement("div");
     newDiv.className = "displayedsquare" + " " + e.target.classList[1];
+    const displayedsquares = document.querySelectorAll('.displayedsquare');
+    for (let displayedsquare of displayedsquares) {
+        displayedsquare.addEventListener('click', alertMessage);
+    }
     wrapper.appendChild(newDiv);
     const newListItem = document.createElement("li");
     newListItem.innerHTML = "[" + getElapsedTime() + "]" + " Created a new " + e.target.classList[1] + " square.";
@@ -50,20 +58,4 @@ document.body.onkeyup = function (e) {
             newSquares[i].remove();
         }
     }
-}
-
-// const newSquares = document.querySelector(".displayedsquare-wrapper").children;
-
-// newSquares.addEventListener("click", function () {
-//     alert("Hello World!");
-// })
-
-const displayedsquares = document.querySelectorAll('.displayedsquare')
-
-function alertMessage() {
-    console.log("hey");
-    alert("Hello World!");} 
-
-for (let displayedsquare of displayedsquares) {
-    displayedsquare.addEventListener('click', alertMessage)
 }
