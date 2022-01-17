@@ -7,7 +7,7 @@ const secondSection = document.querySelectorAll("section")[1]; //select the seco
 const thirdSection = document.querySelectorAll("section")[2]; //select the third section
 const thirdHeader = secondSection.children[0]; //set variable for the header that should be in the third section
 const secondHeader = thirdSection.children[0].children[0]; //set variable for the header that should be in the second section
-secondSection.insertBefore(secondHeader, secondSection.children[0]);
-thirdSection.insertBefore(thirdHeader, thirdSection.children[0]);
+secondSection.insertBefore(secondHeader, secondSection.children[0]); //append the second header to the second section
+thirdSection.insertBefore(thirdHeader, thirdSection.children[0]); //append the third header to the third section
 
-thirdSection.remove();
+thirdSection.remove(); //remove the third section of the DOM
