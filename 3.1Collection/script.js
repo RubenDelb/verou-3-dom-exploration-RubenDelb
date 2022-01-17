@@ -11,7 +11,7 @@ let searchBar = document.createElement("input");
 searchBar.id = "searchBar";
 searchBar.type = "text";
 searchBar.name = "search";
-searchBar.placeholder = "Search recipe/difficulty/origin";
+searchBar.placeholder = "Search recipe/origin";
 searchBar.onkeyup = function () {
     let input = document.getElementById("searchBar").value.toLowerCase();
     let cardTitles = document.querySelectorAll("a.recipeLink");
@@ -87,20 +87,28 @@ for (let recipe of recipes) {
     difficultyDiv.className = "difficultyDiv";
     preparation.appendChild(difficultyDiv);
 
-    const chefshatImg = document.createElement("img");
-    chefshatImg.className = "chefshatImg";
-    chefshatImg.src = chefshat;
-    difficultyDiv.appendChild(chefshatImg);
+    for (let i = 0; i < recipe.difficulty.length; i++) {
+        const image = new Image()
+        image.src = chefshat;
+        image.alt = 'chefshatimg';
+        image.classList.add('chefshatImg');
+        difficultyDiv.appendChild(image);
+    }
+
+    // const chefshatImg = document.createElement("img");
+    // chefshatImg.className = "chefshatImg";
+    // chefshatImg.src = chefshat;
+    // difficultyDiv.appendChild(chefshatImg);
 
     const preparationTime = document.createElement("p"); //Create an p for the preparationTime
     preparationTime.className = "preparationTime"; //assign classname
     preparationTime.innerHTML = recipe.preparationTime; //implement the preparationTime-name from the array to the p-element
     preparationDiv.appendChild(preparationTime); //add the p to the preparation-div
 
-    const difficulty = document.createElement("p"); //Create an p for the difficulty
-    difficulty.className = "difficulty"; //assign classname
-    difficulty.innerHTML = recipe.difficulty; //implement the difficulty-name from the array to the p-element
-    difficultyDiv.appendChild(difficulty); //add the p to the preparation-div
+    // const difficulty = document.createElement("p"); //Create an p for the difficulty
+    // difficulty.className = "difficulty"; //assign classname
+    // difficulty.innerHTML = recipe.difficulty; //implement the difficulty-name from the array to the p-element
+    // difficultyDiv.appendChild(difficulty); //add the p to the preparation-div
 
     main.append(links);
 }

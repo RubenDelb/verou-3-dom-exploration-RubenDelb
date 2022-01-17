@@ -5,7 +5,7 @@ const recipes = [{
         description: 'This flavorful dish is ideal for a quick stew on busy weeknights!',
         origin: 'Mexico',
         preparationTime: '45min',
-        difficulty: 'Easy',
+        difficulty: 'a',
     },
     {
         delink: 'https://www.indianhealthyrecipes.com/baingan-bharta/',
@@ -14,7 +14,7 @@ const recipes = [{
         description: 'Baingan bharta is a divine mash of smoky aubergines, mixed with Indian seasonings. Delicious for dipping with bread.',
         origin: 'India',
         preparationTime: '35min',
-        difficulty: 'Medium',
+        difficulty: 'bb',
     },
     {
         delink: 'https://www.libelle-lekker.be/bekijk-recept/18130/paprikasoep-met-mascarpone-en-pesto',
@@ -23,7 +23,7 @@ const recipes = [{
         description: 'A rich and intensely flavoured roasted red pepper soup made with juicy and charred yellow peppers & mascarpone.',
         origin: 'Italy',
         preparationTime: '30min',
-        difficulty: 'Medium',
+        difficulty: 'bb',
     },
     {
         delink: 'https://www.feastingathome.com/vegetarian-shepherds-pie/',
@@ -32,7 +32,7 @@ const recipes = [{
         description: 'A vegetarian Shepherd\'s Pie infused with the most fragrant Indian spices.',
         origin: 'India',
         preparationTime: '1h15min',
-        difficulty: 'Hard',
+        difficulty: 'ccc',
     },
     {
         delink: 'https://www.leukerecepten.nl/recepten/shakshuka/',
@@ -41,7 +41,7 @@ const recipes = [{
         description: 'Shakshuka is a North African and Middle Eastern meal of poached eggs in a simmering tomato sauce with spices.',
         origin: 'Tunisia',
         preparationTime: '35min',
-        difficulty: 'Easy',
+        difficulty: 'a',
     },
     {
         delink: 'https://www.veguru.be/recipe/vegan-stoverij/',
@@ -50,7 +50,7 @@ const recipes = [{
         description: 'A delicious stew with fries always tastes great! This Flemish classic is easy to make without meat.',
         origin: 'Belgium',
         preparationTime: '2h15min',
-        difficulty: 'Hard',
+        difficulty: 'ccc',
     },
     {
         delink: 'https://cookieandkate.com/thai-panang-curry-recipe/',
@@ -59,7 +59,7 @@ const recipes = [{
         description: 'It\'s rich and spicy with a distinctly unique flavor from the addition of kaffir lime leaves and panaeng curry paste.',
         origin: 'Thailand',
         preparationTime: '45min',
-        difficulty: 'Easy',
+        difficulty: 'a',
     },
     {
         delink: 'https://www.healthyfood.com/healthy-recipes/vegetarian-tagine/',
@@ -68,7 +68,7 @@ const recipes = [{
         description: 'This full-flavoured tagine is a cheap, healthy way of getting extra vegetables into your family\'s diet. ',
         origin: 'Morocco',
         preparationTime: '1h10min',
-        difficulty: 'Medium',
+        difficulty: 'bb',
     },
     {
         delink: 'https://chickslovefood.com/recept/pad-thai-met-tofu/',
@@ -77,7 +77,7 @@ const recipes = [{
         description: 'It\'s a stir-fried rice noodle dish commonly served as a street food in Thailand as part of the country\'s cuisine.',
         origin: 'Thailand',
         preparationTime: '25min',
-        difficulty: 'Easy',
+        difficulty: 'a',
     },
     {
         delink: 'https://www.mygingergarlickitchen.com/jaipuri-aloo-pyaaz-ki-sabzi-potato-onion-curry-video-recipe/',
@@ -86,7 +86,7 @@ const recipes = [{
         description: 'A heavenly preparation using potatoes and onions, cooked in a scrumptious curry, packed with savoury flavors',
         origin: 'India',
         preparationTime: '45min',
-        difficulty: 'Medium',
+        difficulty: 'bb',
     },
     {
         delink: 'https://www.hellofresh.be/recipes/linguine-met-cherrytomaten-uit-de-oven-5be18ffeae08b5275a1375f2',
@@ -95,7 +95,7 @@ const recipes = [{
         description: 'Juicy cherry tomatoes that burst open in warm olive oil, creating a luxurious sauce that comes together in minutes.',
         origin: 'Italy',
         preparationTime: '30min',
-        difficulty: 'Easy',
+        difficulty: 'a',
     },
     {
         delink: 'https://www.libelle-lekker.be/bekijk-recept/84072/veganistische-vol-au-vent-1',
@@ -104,7 +104,7 @@ const recipes = [{
         description: 'An extremely delicious vegan version of the classic vol-au-vent.',
         origin: 'Belgium',
         preparationTime: '45min',
-        difficulty: 'Medium',
+        difficulty: 'bb',
     },
     {
         delink: 'https://www.hellofresh.be/recipes/groentepaella-met-krokante-halloumi-5f0c61f1c3795f61c21f5d47',
@@ -113,7 +113,7 @@ const recipes = [{
         description: 'This vegetable paella with crispy halloumi is ideal for the lovers of Spanish food.',
         origin: 'Spain',
         preparationTime: '30min',
-        difficulty: 'Medium',
+        difficulty: 'bb',
     },
 
 ]
