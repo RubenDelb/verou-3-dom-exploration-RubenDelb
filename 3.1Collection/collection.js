@@ -74,7 +74,7 @@ const recipes = [{
         delink: 'https://chickslovefood.com/recept/pad-thai-met-tofu/',
         picture: './Pictures/PadThai.jpg',
         name: 'Pad Thai',
-        description: 'It\'s a stir-fried rice noodle dish commonly served as a street food in Thailand as part of the country\'s cuisine.',
+        description: 'A stir-fried rice noodle dish commonly served as a street food in Thailand as part of the country\'s cuisine.',
         origin: 'Thailand',
         preparationTime: '25min',
         difficulty: 'a',

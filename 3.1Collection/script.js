@@ -6,7 +6,7 @@ const main = document.querySelector("main");
 
 const header = document.querySelector("header");
 
-// TODO: add searchbar to filter item cards
+// Add searchbar to filter item cards
 let searchBar = document.createElement("input");
 searchBar.id = "searchBar";
 searchBar.type = "text";
@@ -16,7 +16,6 @@ searchBar.onkeyup = function () {
     let input = document.getElementById("searchBar").value.toLowerCase();
     let cardTitles = document.querySelectorAll("a.recipeLink");
 
-    //console.log(cardTitles[0].innerHTML);
     cardTitles.forEach((el) => {
         let recipeTitle = el.children[0].children[1].children[0].innerHTML;
         let recipeDifficulty = el.children[0].children[1].children[1].children[1].innerHTML;
@@ -32,6 +31,14 @@ searchBar.onkeyup = function () {
 
 header.appendChild(searchBar);
 
+function darkModer() {
+    var element = document.body;
+    element.classList.toggle("dark-mode");
+}
+
+const button = document.getElementById("darkMode");
+button.addEventListener('click', darkModer)
+
 const timer = "./Pictures/timer-svgrepo-com (1).svg";
 
 const chefshat = "./Pictures/chefshat.svg";
@@ -39,6 +46,7 @@ const chefshat = "./Pictures/chefshat.svg";
 for (let recipe of recipes) {
     const links = document.createElement("a"); //Create an anchor-tag to add a link to the card when clicked.
     links.className = "recipeLink"; //assign a classname
+    links.classList.add = recipe.difficulty;
     links.href = recipe.delink; //add the link in the anchortag
     links.target = "_blank";
 
@@ -86,6 +94,11 @@ for (let recipe of recipes) {
     const difficultyDiv = document.createElement("div");
     difficultyDiv.className = "difficultyDiv";
     preparation.appendChild(difficultyDiv);
+
+    const difficulty = document.createElement("p"); //Create an p for the difficulty
+    difficulty.className = "difficulty"; //assign classname
+    difficulty.innerHTML = "Level: " + "&nbsp;"; //implement the difficulty-name from the array to the p-element
+    difficultyDiv.appendChild(difficulty); //add the p to the preparation-div 
 
     for (let i = 0; i < recipe.difficulty.length; i++) {
         const image = new Image()
