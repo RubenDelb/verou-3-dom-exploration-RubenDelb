@@ -10,7 +10,6 @@ body {
     font-family: 'Poppins', sans-serif;
 }
 
-
 /* The switch - the box around the slider */
 .switch {
     position: relative;
@@ -46,7 +45,7 @@ body {
     width: 26px;
     left: 4px;
     bottom: 4px;
-    background-color: white;
+    background-color: rgb(150, 123, 123);
     -webkit-transition: .4s;
     transition: .4s;
 }
@@ -148,8 +147,6 @@ main {
                     font-size: 0.8em;
                     padding: 10px;
                 }
-
-                .description {}
 
                 .preparation {
                     display: flex;
