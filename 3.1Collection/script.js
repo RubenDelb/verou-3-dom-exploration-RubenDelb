@@ -6,7 +6,7 @@ const main = document.querySelector("main");
 
 const header = document.querySelector("header");
 
-// Add searchbar to filter item cards
+// Create searchbar to filter item cards on title, difficulty or origin.
 let searchBar = document.createElement("input");
 searchBar.id = "searchBar";
 searchBar.type = "text";
@@ -31,13 +31,14 @@ searchBar.onkeyup = function () {
 
 header.appendChild(searchBar);
 
-function darkModer() {
+// Add class "dark-mode" dynamically with this function
+const toggleDarkMode = () => {
     var element = document.body;
     element.classList.toggle("dark-mode");
 }
 
 const button = document.getElementById("darkMode");
-button.addEventListener('click', darkModer)
+button.addEventListener('click', toggleDarkMode) // When the darkMode-button is clicked, add class dark-mode
 
 const timer = "./Pictures/timer-svgrepo-com (1).svg";
 
@@ -108,47 +109,10 @@ for (let recipe of recipes) {
         difficultyDiv.appendChild(image);
     }
 
-    // const chefshatImg = document.createElement("img");
-    // chefshatImg.className = "chefshatImg";
-    // chefshatImg.src = chefshat;
-    // difficultyDiv.appendChild(chefshatImg);
-
     const preparationTime = document.createElement("p"); //Create an p for the preparationTime
     preparationTime.className = "preparationTime"; //assign classname
     preparationTime.innerHTML = recipe.preparationTime; //implement the preparationTime-name from the array to the p-element
     preparationDiv.appendChild(preparationTime); //add the p to the preparation-div
 
-    // const difficulty = document.createElement("p"); //Create an p for the difficulty
-    // difficulty.className = "difficulty"; //assign classname
-    // difficulty.innerHTML = recipe.difficulty; //implement the difficulty-name from the array to the p-element
-    // difficultyDiv.appendChild(difficulty); //add the p to the preparation-div
-
     main.append(links);
 }
-
-// const names = recipes.map(o => o.name).flat();
-
-// const picture = recipes.map(o => o.picture).flat();
-
-// const description = recipes.map(o => o.description).flat();
-
-// const origin = recipes.map(o => o.description).flat();
-
-// const preparationTime = recipes.map(o => o.preparationTime).flat();
-
-// const difficulty = recipes.map(o => o.difficulty).flat();
-
-// for (var i = 0; i < names.length; i++) {
-//     console.log(names[i]);
-//     const newDiv = document.createElement("div");
-//     newDiv.style.backgroundColor = "#fdfdf6";
-//     const newImg = document.createElement("img");
-//     newImg.src = picture[i];
-//     newDiv.append(newImg);
-//     newDiv.append(names[i]);
-//     newDiv.append(description[i]);
-//     newDiv.append(origin[i]);
-//     newDiv.append(preparationTime[i]);
-//     newDiv.append(difficulty[i]);
-//     main.append(newDiv);
-// }
